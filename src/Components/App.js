@@ -8,6 +8,7 @@ function App() {
     quittanceOf50: "",
     quittanceOf60: "",
   });
+  const [stateResult, setStateResult] = useState(0);
 
   const handleChange = (evt) => {
     setState({
@@ -16,7 +17,27 @@ function App() {
     });
   };
 
-  console.log(state);
+  // Put all values in integer
+  const integerParticipants = Number(state.numberOfParticipants);
+  const integerOf35 = Number(state.quittanceOf35);
+  const integerOf50 = Number(state.quittanceOf50);
+  const integerOf60 = Number(state.quittanceOf60);
+
+  // Function get an average
+  function getAverage(oneLevel, secondLevel, thirdLevel) {
+    let resultOfFirstLevel = oneLevel * 35;
+    let resultOfSecondLevel = secondLevel * 50;
+    let resultOfThirdLevel = thirdLevel * 60;
+
+    return resultOfFirstLevel + resultOfSecondLevel + resultOfThirdLevel;
+  }
+
+  let myResult =
+    getAverage(integerOf35, integerOf50, integerOf60) / integerParticipants;
+
+  const handleResult = () => {
+    setStateResult(myResult / state.numberOfParticipants);
+  };
 
   return (
     <div className="App">
@@ -37,7 +58,7 @@ function App() {
           onChange={handleChange}
           name="quittanceOf35"
         />
-        Quittance de 35 euros
+        Quittances de 35 euros
       </div>
       <div>
         <input
@@ -46,7 +67,7 @@ function App() {
           onChange={handleChange}
           name="quittanceOf50"
         />
-        Quittance de 50 euros
+        Quittances de 50 euros
       </div>
       <div>
         <input
@@ -55,8 +76,11 @@ function App() {
           onChange={handleChange}
           name="quittanceOf60"
         />
-        Quittance de 60 euros
+        Quittances de 60 euros
       </div>
+      <button onClick={handleResult}>GO</button>
+      {/* <h2>Resultat: {myResult}</h2> */}
+      <h2>Le resultat est de : {Math.floor(stateResult)}</h2>
     </div>
   );
 }
