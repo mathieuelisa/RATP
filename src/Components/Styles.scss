@@ -1,4 +1,99 @@
 body {
   background-color: #75cec0;
   color: whitesmoke;
+  font-family: arial;
+}
+
+.App {
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+}
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 400px;
+  margin: 0 auto;
+}
+
+.inputData {
+  margin: 10px;
+  width: 200px;
+
+  &-each {
+    width: 100%;
+    padding: 5px;
+    background-color: transparent;
+    border: none;
+    border-bottom: 2px solid whitesmoke;
+    color: #f5f5f5;
+    text-align: center;
+    font-size: 2em;
+  }
+
+  &-label {
+    display: flex;
+    flex-direction: column;
+    text-align: center;
+  }
+
+  &-text {
+    padding-top: 5px;
+  }
+}
+
+.logo {
+  display: flex;
+  justify-content: center;
+  height: 176px;
+  width: 308px;
+  margin: 0 auto;
+
+  &-image {
+    height: 100%;
+    width: 100%;
+    object-fit: contain;
+    margin-top: 30px;
+  }
+}
+
+.result {
+  padding: 10px;
+  width: 560px;
+  font-size: 1em;
+  text-align: center;
+
+  &-button {
+    width: 150px;
+    margin: 20px;
+    cursor: pointer;
+    padding: 10px;
+    border-radius: 10px;
+    transition: 1s;
+    color: whitesmoke;
+    border-color: whitesmoke;
+    background: transparent;
+
+    &:hover {
+      color: #1faf9c;
+      border-bottom: 1px solid whitesmoke;
+    }
+  }
+
+  &-number {
+    color: #1faf9c;
+    font-size: 1.5em;
+    border-bottom: 1px solid;
+    padding: 0 5px 0px 5px;
+  }
+}
+
+@media screen and (max-width: 1040px) {
+  .result {
+    font-size: 0.8em;
+    width: 295px;
+  }
 }
