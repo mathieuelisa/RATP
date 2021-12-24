@@ -1,5 +1,5 @@
 body {
-  background-color: #75cec0;
+  background-color: #09044e;
   color: whitesmoke;
   font-family: arial;
 }
@@ -95,5 +95,14 @@ body {
   .result {
     font-size: 0.8em;
     width: 295px;
+    line-height: 25px;
+  }
+
+  .inputData-each {
+    font-size: 1.5em;
+  }
+
+  .inputData-text {
+    font-size: 0.8em;
   }
 }
