@@ -13,9 +13,9 @@ body {
 .wrapper {
   display: flex;
   flex-direction: column;
-  justify-content: center;
   align-items: center;
   width: 400px;
+  height: 480px;
   margin: 0 auto;
 }
 
@@ -42,6 +42,7 @@ body {
 
   &-text {
     padding-top: 5px;
+    font-size: 0.7em;
   }
 }
 
@@ -72,7 +73,7 @@ body {
     cursor: pointer;
     padding: 10px;
     border-radius: 10px;
-    transition: 1s;
+    transition: 0.3s;
     color: whitesmoke;
     border-color: whitesmoke;
     background: transparent;
@@ -89,6 +90,13 @@ body {
     border-bottom: 1px solid;
     padding: 0 5px 0px 5px;
   }
+}
+
+.footer {
+  font-size: 0.6em;
+  bottom: 21px;
+  margin: 0 auto;
+  color: #04022a;
 }
 
 @media screen and (max-width: 1040px) {

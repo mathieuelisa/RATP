@@ -1,7 +1,8 @@
-import { useState } from "react";
 import "./Styles.scss";
-import logo from "../Assets/ratp.png";
+
+import { useState } from "react";
 import { Zoom, Fade } from "react-reveal";
+import logo from "../Assets/ratp.png";
 
 function App() {
   const [state, setState] = useState({
@@ -27,9 +28,9 @@ function App() {
 
   // Function get an average
   const getAverage = (oneLevel, secondLevel, thirdLevel) => {
-    let resultOfFirstLevel = oneLevel * 35;
-    let resultOfSecondLevel = secondLevel * 50;
-    let resultOfThirdLevel = thirdLevel * 60;
+    const resultOfFirstLevel = oneLevel * 35;
+    const resultOfSecondLevel = secondLevel * 50;
+    const resultOfThirdLevel = thirdLevel * 60;
 
     return resultOfFirstLevel + resultOfSecondLevel + resultOfThirdLevel;
   };
@@ -48,7 +49,6 @@ function App() {
     day: "numeric",
   };
   const myCurrentDate = new Date().toLocaleDateString("fr-FR", options);
-  console.log(myCurrentDate);
 
   return (
     <div className="App">
@@ -68,7 +68,7 @@ function App() {
                 name="numberOfParticipants"
                 className="inputData-each"
               />
-              <p className="inputData-text">Nombre de participants</p>
+              <p className="inputData-text">NOMBRES DE PARTICIPANTS</p>
             </label>
           </div>
         </Fade>
@@ -83,7 +83,7 @@ function App() {
                 name="quittanceOf35"
                 className="inputData-each"
               />
-              <p className="inputData-text"> Quittances de 35 euros</p>
+              <p className="inputData-text">QUITTANCES DE 35 EUROS</p>
             </label>
           </div>
         </Fade>
@@ -98,7 +98,7 @@ function App() {
                 name="quittanceOf50"
                 className="inputData-each"
               />
-              <p className="inputData-text"> Quittances de 50 euros</p>
+              <p className="inputData-text">QUITTANCES DE 50 EUROS</p>
             </label>
           </div>
         </Fade>
@@ -113,7 +113,7 @@ function App() {
                 name="quittanceOf60"
                 className="inputData-each"
               />
-              <p className="inputData-text"> Quittances de 60 euros</p>
+              <p className="inputData-text">QUITTANCES DE 60 EUROS</p>
             </label>
           </div>
         </Fade>
@@ -133,6 +133,9 @@ function App() {
             </h2>
           </>
         )}
+      </div>
+      <div className="footer">
+        <p>Created by ELISA Mathieu by the idea of CALISTE Yohann</p>
       </div>
     </div>
   );
