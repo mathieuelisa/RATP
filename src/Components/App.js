@@ -135,7 +135,7 @@ function App() {
         )}
       </div>
       <div className="footer">
-        <p>Created by ELISA Mathieu by the idea of CALISTE Yohann</p>
+        <p>Crée par ELISA Mathieu sur une idée de CALISTE Yohann</p>
       </div>
     </div>
   );
