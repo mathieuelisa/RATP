@@ -117,9 +117,9 @@ function App() {
             </label>
           </div>
         </Fade>
-        <button onClick={handleResult} className="result-button">
+        <a onClick={handleResult} className="result-button">
           LET'S GO
-        </button>
+        </a>
         {!stateResult ? (
           ""
         ) : (

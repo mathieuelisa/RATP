@@ -5,7 +5,6 @@ body {
 }
 
 .App {
-  height: 100vh;
   display: flex;
   flex-direction: column;
 }
@@ -14,7 +13,6 @@ body {
   display: flex;
   flex-direction: column;
   align-items: center;
-  width: 400px;
   height: 480px;
   margin: 0 auto;
 }
@@ -71,11 +69,12 @@ body {
     width: 150px;
     margin: 20px;
     cursor: pointer;
+    border: 2px solid whitesmoke;
     padding: 10px;
     border-radius: 10px;
+    text-align: center;
     transition: 0.3s;
     color: whitesmoke;
-    border-color: whitesmoke;
     background: transparent;
 
     &:hover {
